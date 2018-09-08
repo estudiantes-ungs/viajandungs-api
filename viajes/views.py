@@ -1,5 +1,7 @@
-from django.shortcuts import render
-from django.http import HttpResponse
+from rest_framework import viewsets
+from viajes.models import Viaje
+from .serializers import ViajeSerializer
 
-def index (request):
-    return HttpResponse("Vista viajes")
+class ViajeRUD(viewsets.ModelViewSet):
+    queryset = Viaje.objects.all()
+    serializer_class = ViajeSerializer
