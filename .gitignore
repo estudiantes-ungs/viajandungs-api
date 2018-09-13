@@ -105,3 +105,4 @@ venv.bak/
 
 # Django config
 /viajandungs/settings.py
+/viajandungs/__init__.py
