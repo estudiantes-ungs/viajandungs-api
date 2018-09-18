@@ -7,6 +7,8 @@ class ViajeSerializer(serializers.ModelSerializer):
         fields = (
             'pk',
             'name',
+            'destination',
+            'career',
             'description',
             'date',
             'createdAt'
