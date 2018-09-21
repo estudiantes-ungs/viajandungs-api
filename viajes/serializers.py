@@ -10,6 +10,8 @@ class ViajeSerializer(serializers.ModelSerializer):
             'destination',
             'career',
             'description',
-            'date',
+            'eventUrl',
+            'departureDate',
+            'returnDate',
             'createdAt'
         )
