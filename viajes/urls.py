@@ -4,7 +4,9 @@ from . import views
 
 router = routers.DefaultRouter()
 router.register('viajes', views.ViajeRUD)
+router.register('noticias', views.NoticiaViajeRUD)
 
 urlpatterns = [
-    url('viaje', include(router.urls))
+    url('viaje', include(router.urls)),
+    url('noticia/(?P<viaje>.+)/', include(router.urls))
 ]

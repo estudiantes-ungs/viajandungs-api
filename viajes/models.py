@@ -14,3 +14,12 @@ class Viaje(models.Model):
 
     def __str__(self):
         return self.name
+
+class Noticia(models.Model):
+    viaje = models.ForeignKey(Viaje, related_name="noticias", on_delete=models.CASCADE)
+    name = models.CharField(max_length=140)
+    text = models.TextField()
+    createdAt = models.DateTimeField(default=datetime.now)
+
+    def __str__(self):
+        return self.name
